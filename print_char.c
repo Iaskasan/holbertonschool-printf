@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf_chara - Function
+ * print_char - Function
  * @args: variable containing the character
  *
  * Return: returns the char

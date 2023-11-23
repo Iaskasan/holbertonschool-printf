@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_percentage - Entry point
+ * print_percent - Entry point
  * @arg: argumento
  * Return: percen
  */
