@@ -8,19 +8,23 @@
 int print_string(va_list args)
 {
 	char *str;
-	int strlen;
+	int total_len = 0;
 
-	while (va_arg(args, char*) != NULL)
+	str = va_arg(args, char *);
+
+	if (str == NULL)
 	{
-		str = va_arg(args, char*);
-		strlen = _strlen(str);
-		if (str == NULL)
-		{
-			break;
-		}
-		write(1, str, strlen);
+		return (write(1, &str, 1));
+	}
+	while (*str != '\0')
+	{
+		_putchar(*str);
+		str++;
+
+		total_len++;
 	}
 	_putchar('\n');
-	va_end(args);
-	return (1);
+
+	return (total_len);
 }
+

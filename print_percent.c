@@ -2,7 +2,7 @@
 
 /**
  * print_percent - Entry point
- * @arg: argumento
+ * @arg: argument that stores the character
  * Return: percen
  */
 int print_percent(va_list arg)

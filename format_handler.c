@@ -5,9 +5,10 @@
  * and calls the corresponding function.
  * @format: The format specifier character.
  * @args: The va_list of arguments.
+ * Return: size
  */
 
-void format_handler(const char format, va_list args)
+int format_handler(const char format, va_list args)
 {
 	int i = 0;
 
@@ -17,14 +18,14 @@ void format_handler(const char format, va_list args)
 		{'%', print_percent},
 		{'\0', NULL}
 	};
-	while (arr[i].format != '\0')
+
+	for (i = 0; arr[i].format != '\0'; i++)
 	{
 		if (arr[i].format == format)
 		{
-			arr[i].f(args);
-			return;
+			return (arr[i].f(args));
 		}
-	i++;
 	}
 	write(1, "error", 5);
+	return (-1);
 }

@@ -1,33 +1,29 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-<<<<<<< HEAD
-int _printf(const char *format, ...);
-
 
 #include <stdlib.h>
-=======
->>>>>>> 8d8fc25c943152ecadc94e7980ef74a3c8dba1e0
 #include <unistd.h>
-#include <stdlib.h>
 #include <stdarg.h>
 
-int _putchar(const char c);
 int _printf(const char *format, ...);
-int _strlen(char *s);
-int print_character(va_list arguments);
-int print_string(va_list arguments);
-int print_percentage(va_list arguments);
-int print_number(va_list arguments);
 
-
-<<<<<<< HEAD
-=======
-typedef struct format_handler
+/**
+ * struct specifier_handler - struct for specifier handler
+ * @format: specifier to be checked
+ * @f: pointer to specifier handler
+*/
+typedef struct specifier_handler
 {
-	char format;
-	int (*f)(va_list);
+    char format;
+    int (*f)(va_list args);
 } handler;
 
->>>>>>> 8d8fc25c943152ecadc94e7980ef74a3c8dba1e0
+int print_char(va_list args);
+int _putchar(const char c);
+int print_percent(va_list arg);
+int format_handler(const char format, va_list args);
+int print_string(va_list args);
+int _strlen(char *s);
+
 #endif

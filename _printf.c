@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- * _printf - 
+ * _printf - the printf function
+ * @format: format string containing conversion specifiers
+ * Return: size of formated string
  */
 
 int _printf(const char *format, ...)
