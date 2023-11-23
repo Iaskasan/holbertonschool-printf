@@ -8,8 +8,8 @@
 
 int _printf(const char *format, ...);
 
-int print_chara(char args);
+int print_char(char args);
 int _putchar(const char c);
-int print_percentage(va_list arg);
+int print_percent(va_list arg);
 
 #endif

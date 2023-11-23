@@ -6,7 +6,7 @@
  *
  * Return: returns the char
  */
-int printf_chara(va_list args)
+int print_char(va_list args)
 {
 	char c;
 

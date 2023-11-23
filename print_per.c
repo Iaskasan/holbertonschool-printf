@@ -5,7 +5,7 @@
  * @arg: argumento
  * Return: percen
  */
-int print_percentage(va_list arg)
+int print_percent(va_list arg)
 {
 	char percen = '%';
 	(void) arg;
