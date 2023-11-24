@@ -11,8 +11,8 @@ int print_char(va_list args)
 	char c;
 
 	c = va_arg(args, int);
-	(write(1, &args, 1));
-	return (c);
+	(write(1, &c, 1));
+	return (1);
 }
 
 /**
@@ -22,22 +22,19 @@ int print_char(va_list args)
  */
 int print_string(va_list args)
 {
-	char *str;
-	int total_len;
+    char *str = va_arg(args, char*);
+    int total_len = 0;
 
-	while (va_arg(args, char*) != NULL)
-	{
-		str = va_arg(args, char*);
-		total_len = _strlen(str);
-		if (str == NULL)
-		{
-			break;
-		}
-		write(1, str, total_len);
-	}
-	_putchar('\n');
-	return (total_len);
+    while (str != NULL)
+    {
+        total_len += _strlen(str);
+        write(1, str, _strlen(str));
+        str = va_arg(args, char*);
+    }
+    _putchar('\n');
+    return total_len;
 }
+
 
 /**
  * print_percent - Entry point
