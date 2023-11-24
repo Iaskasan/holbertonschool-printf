@@ -23,21 +23,20 @@ int print_char(va_list args)
 int print_string(va_list args)
 {
 	char *str;
-	int strlen;
+	int total_len;
 
 	while (va_arg(args, char*) != NULL)
 	{
 		str = va_arg(args, char*);
-		strlen = _strlen(str);
+		total_len = _strlen(str);
 		if (str == NULL)
 		{
 			break;
 		}
-		write(1, str, strlen);
+		write(1, str, total_len);
 	}
 	_putchar('\n');
-	va_end(args);
-	return (1);
+	return (total_len);
 }
 
 /**
@@ -47,8 +46,8 @@ int print_string(va_list args)
  */
 int print_percent(va_list arg)
 {
-	char percen = '%';
+	char percent = '%';
 	(void) arg;
 
-	return (write(1, &percen, 1));
+	return (write(1, &percent, 1));
 }
