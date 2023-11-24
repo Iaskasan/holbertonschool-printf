@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			len += format_handler(format[i + 1], args);
+
 			i += 2;
 		}
 		else
