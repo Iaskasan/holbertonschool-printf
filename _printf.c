@@ -10,7 +10,6 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	int len = 0;
-	int result;
 
 	va_list args;
 
@@ -24,15 +23,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			result = format_handler(format[i + 1], args);
+			len += format_handler(format[i + 1], args);
 
-			if (result == -1)
-			{
-				len += _putchar(format[i]);
-				len += _putchar(format[i + 1]);
-			}
-			else
-				len += result;
 			i += 2;
 		}
 		else
