@@ -16,6 +16,8 @@ int format_handler(const char format, va_list args)
 		{'c', print_char},
 		{'s', print_string},
 		{'%', print_percent},
+		{'d', print_number},
+		{'i', print_number},
 		{'\0', NULL}
 	};
 
@@ -26,8 +28,13 @@ int format_handler(const char format, va_list args)
 			return (arr[i].f(args));
 		}
 	}
+
 	i = 0;
 	i += _putchar('%');
 	i += _putchar(format);
 	return (i);
+
+	write(1, &format, 1);
+	return (1);
+
 }
