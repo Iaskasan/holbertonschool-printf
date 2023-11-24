@@ -23,6 +23,6 @@ int print_percent(va_list arg);
 int format_handler(const char format, va_list args);
 int print_string(va_list args);
 int _strlen(char *s);
-int print_number(va_list arguments);
+int print_number(va_list args);
 
 #endif
