@@ -26,6 +26,6 @@ int format_handler(const char format, va_list args)
 			return (arr[i].f(args));
 		}
 	}
-	write(1, "error", 5);
-	return (-1);
+	write(1, &format, 1);
+	return (1);
 }
