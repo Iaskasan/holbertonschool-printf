@@ -27,9 +27,7 @@ int format_handler(const char format, va_list args)
 		}
 	}
 	i = 0;
-
 	i += _putchar('%');
 	i += _putchar(format);
-
 	return (i);
 }
