@@ -33,8 +33,4 @@ int format_handler(const char format, va_list args)
 	i += _putchar('%');
 	i += _putchar(format);
 	return (i);
-
-	write(1, &format, 1);
-	return (1);
-
 }
