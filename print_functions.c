@@ -22,19 +22,18 @@ int print_char(va_list args)
  */
 int print_string(va_list args)
 {
-	char *str = va_arg(args, char*);
-	int total_len = 0;
+    char *str = va_arg(args, char*);
+    int total_len = 0;
 
-	if (str == NULL)
-	{
-		str = "(null)";
-	}
-	total_len = _strlen(str);
-	write(1, str, total_len);
+    if (str == NULL)
+    {
+        str = "(null)";
+    }
+    total_len = _strlen(str);
+    write(1, str, total_len);
 
-	return (total_len);
+    return (total_len);
 }
-
 
 /**
  * print_percent - Entry point
@@ -47,4 +46,52 @@ int print_percent(va_list arg)
 	(void) arg;
 
 	return (write(1, &percent, 1));
+}
+
+/**
+ * print_number - print an int to the standard output
+ *
+ * @arguments: a va_list containing the integer to be printed
+ *
+ * Return: the number of characters printed
+ */
+int print_number(va_list arguments)
+{
+	long int number = va_arg(arguments, int);
+
+	long int absolute_number = 0;
+	long int temp_number = absolute_number;
+	long int digit_position = 1;
+
+	int lenght = 0;
+
+	if (number < 0)
+	{
+		absolute_number = (number * -1);
+		_putchar('-');
+
+		lenght++;
+	}
+	else
+	{
+		absolute_number = number;
+	}
+
+	temp_number = absolute_number;
+
+	while (temp_number > 9)
+	{
+		temp_number = temp_number / 10;
+		digit_position = digit_position * 10;
+	}
+
+	while (digit_position >= 1)
+	{
+		_putchar(((absolute_number / digit_position) % 10) + '0');
+		digit_position = digit_position / 10;
+
+		lenght++;
+	}
+
+	return (lenght);
 }
