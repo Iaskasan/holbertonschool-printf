@@ -55,10 +55,9 @@ int print_percent(va_list arg)
  *
  * Return: the number of characters printed
  */
-int print_number(va_list arguments)
+int print_number(va_list args)
 {
-	long int number = va_arg(arguments, int);
-
+	long int number = va_arg(args, int);
 	long int absolute_number = 0;
 	long int temp_number = absolute_number;
 	long int digit_position = 1;
