@@ -25,14 +25,14 @@ int print_string(va_list args)
     char *str = va_arg(args, char*);
     int total_len = 0;
 
-    while (str != NULL)
+    if (str == NULL)
     {
-        total_len += _strlen(str);
-        write(1, str, _strlen(str));
-        str = va_arg(args, char*);
+        str = "(null)";
     }
-    _putchar('\n');
-    return total_len;
+    total_len = _strlen(str);
+    write(1, str, total_len);
+
+    return (total_len);
 }
 
 
