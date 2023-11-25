@@ -30,7 +30,7 @@ Create the printf function
 
 * **Input:** _printf("%s\n", 'Hello World');
 * **Output:** Hello World.
-* 
+ 
 **Character**
   
 * **Input:** _printf("The first letter of Hello World is %c\n", 'H');
