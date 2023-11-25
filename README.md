@@ -33,15 +33,20 @@ Create the printf function
  
 **Character**
   
-* **Input:** _printf("The first letter of Hello World is %c\n", 'H');
-* **Output:** The first letter of Hello World is H
+* **Input:** _printf("The first letter of Holberton is %c\n", 'H');
+* **Output:** The first letter of Holberton is H
 
 **Integer:**
 
-* **Input:** _printf("I'm %i years old\n", 25);
-* **Output:** I'm 25 years old
+* **Input:** _printf("I'm %i years old\n", 24);
+* **Output:** I'm 24 years old
 
 **Decimal:**
 
-* **Input:** _printf("%d\n", 2000);
-* **Output:** 2000
+* **Input:** _printf("%d\n", 3000);
+* **Output:** 3000
+
+## Authors
+* **Hadrien @Iaskasan
+*  **Ruth Fonseca @ruthfonsecass
+
