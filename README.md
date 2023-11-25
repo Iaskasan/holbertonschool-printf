@@ -16,3 +16,9 @@ Create the printf function
 * No more than 5 functions per file.
 * The prototypes of all th functions should be included in the header file called main.h.
 * The header files should be include guarded.
+##Mandatory Tasks
+* Write function that produces output with conversion specifiers c, s, and %.
+* Handle conversion specifiers d, i.
+* Create a man page for your function.
+  ## Compilation command
+  'gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c'
