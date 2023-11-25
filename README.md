@@ -27,8 +27,9 @@ Create the printf function
   
 ## Examples
 **String**
+
 **Input:** _printf("%s\n", 'Hello World');
-**Output:**Hello World.
+**Output:** Hello World.
 
 **Character**
 
