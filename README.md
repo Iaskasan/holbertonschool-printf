@@ -26,16 +26,22 @@ Create the printf function
   `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c`
   
 ## Examples
-S**tring**
+**String**
 
 * **Input:** _printf("%s\n", 'Hello World');
 * **Output:** Hello World.
+* 
 **Character**
+  
 * **Input:** _printf("The first letter of Hello World is %c\n", 'H');
 * **Output:** The first letter of Hello World is H
+
 **Integer:**
+
 * **Input:** _printf("I'm %i years old\n", 25);
 * **Output:** I'm 25 years old
+
 **Decimal:**
+
 * **Input:** _printf("%d\n", 2000);
 * **Output:** 2000
