@@ -7,7 +7,5 @@
 ## Objective
 Create the printf function
 
-**Prototype:**
-'''
-int _printf(const char *, ...);
-'''
+**Prototype:** int _printf(const char *, ...);
+## Requirements
