@@ -21,4 +21,4 @@ Create the printf function
 * Handle conversion specifiers d, i.
 * Create a man page for your function.
   ## Compilation command
-  ' gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c '
+  `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c`
