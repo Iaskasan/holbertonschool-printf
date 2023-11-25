@@ -47,6 +47,6 @@ Create the printf function
 * **Output:** 3000
 
 ## Authors
-* **Hadrien @Iaskasan
-*  **Ruth Fonseca @ruthfonsecass
+* **Hadrien** @Iaskasan
+*  **Ruth Fonseca** @ruthfonsecass
 
