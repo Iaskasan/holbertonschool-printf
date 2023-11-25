@@ -34,7 +34,6 @@ Create the printf function
 **Character**
 
 **Input:** _printf("The first letter of Hello World is %c\n", 'H');
-
 **Output:** The first letter of Hello World is H
 
 **Integer:**
