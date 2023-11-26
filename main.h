@@ -17,6 +17,7 @@ typedef struct specifier_handler
     int (*f)(va_list args);
 } handler;
 
+int _printf(const char *format, ...);
 int print_char(va_list args);
 int _putchar(const char c);
 int print_percent(va_list arg);

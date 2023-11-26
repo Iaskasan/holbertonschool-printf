@@ -22,17 +22,17 @@ int print_char(va_list args)
  */
 int print_string(va_list args)
 {
-    char *str = va_arg(args, char*);
-    int total_len = 0;
+	char *str = va_arg(args, char*);
+	int total_len = 0;
 
-    if (str == NULL)
-    {
-        str = "(null)";
-    }
-    total_len = _strlen(str);
-    write(1, str, total_len);
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+	total_len = _strlen(str);
+	write(1, str, total_len);
 
-    return (total_len);
+	return (total_len);
 }
 
 /**
@@ -51,7 +51,7 @@ int print_percent(va_list arg)
 /**
  * print_number - print an int to the standard output
  *
- * @arguments: a va_list containing the integer to be printed
+ * @args: a va_list containing the integer to be printed
  *
  * Return: the number of characters printed
  */

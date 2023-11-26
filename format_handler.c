@@ -28,6 +28,9 @@ int format_handler(const char format, va_list args)
 			return (arr[i].f(args));
 		}
 	}
-	write(1, &format, 1);
-	return (1);
+
+	i = 0;
+	i += _putchar('%');
+	i += _putchar(format);
+	return (i);
 }
